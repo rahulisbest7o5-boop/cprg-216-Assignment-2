@@ -10,4 +10,23 @@ def show_menu():
     return selection
 print(show_menu())
 
+def run_add(students: List[Student]) -> None:
+    while True:
+        print("Enter id of the student, followed by the student's information.")
+        print("id:")
+        sid = int(input().strip())
+        print("name:")
+        name = input().strip()
+        print("gpa:")
+        gpa = float(input().strip())
+        print("semester:")
+        semester = int(input().strip())
+
+        add(students, sid, name, gpa, semester)
+        print("Student added")
+        print(_fmt_full_row(students[-1]))
+        yn = input("Do you want to add a new student?y(yes)/n(no)\n").strip().lower()
+        if yn not in ("y", "yes"):
+            break
+
 
