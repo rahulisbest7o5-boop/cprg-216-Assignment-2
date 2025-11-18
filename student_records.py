@@ -1,5 +1,28 @@
 
 print("Welcome to the Student Records Management System")
+def main():
+    students = []
+    while True:
+        choice = show_menu()
+
+        if choice == "1":
+            run_search(students)
+        elif choice == "2":
+            run_edit(students)
+        elif choice == "3":
+            run_add(students)
+        elif choice == "4":
+            run_remove(students)
+        else:
+            print("Invalid input")
+
+        print("What you like to continue(y/yes), or exit the program(n/no)?")
+        again = input()
+        if again == "y" or again == "yes":
+            continue
+        else:
+            break
+
 def show_menu():
     print("What would you like to do today?")
     print("-Find a student? enter 1")
@@ -11,9 +34,11 @@ def show_menu():
 print(show_menu())
 
 def search(students, sid):
-    for i, s in enumerate(students):
-        if s["id"] == sid:
+    i = 0
+    while i < len(students):
+        if students[i]["id"] == sid:
             return i
+        i = i + 1
     return -1
 
 
@@ -27,7 +52,7 @@ def add(students, sid, name, gpa, semester):
     students.append(student)
 
     print("Student added")
-    print(f"{sid:<8}{name:<15}{gpa:<8}{semester}")
+    print(sid + "    " + name + "    " + str(gpa) + "    " + str(semester))
 
 
 def remove(students, sid):
@@ -35,7 +60,7 @@ def remove(students, sid):
     if index == -1:
         print("Student not found")
     else:
-        students.pop(index)
+        del students[index]
         print("Student removed")
 
 
@@ -64,7 +89,7 @@ def run_search(students):
         else:
             st = students[index]
             print("Student found")
-            print(f"{st['id']:<8}{st['name']:<15}{st['gpa']}")
+            print(st['id'] + "    " + st['name'] + "    " + str(st['gpa']))
 
 
 def run_edit(students):
@@ -96,8 +121,10 @@ def run_add(students):
         add(students, sid, name, gpa, semester)
 
         print("Do you want to add a new student?y(yes)/n(no)")
-        again = input().lower()
-        if again not in ["y", "yes"]:
+        again = input()
+        if again == "y" or again == "yes":
+            continue
+        else:
             break
 
 
@@ -110,38 +137,20 @@ def run_remove(students):
         remove(students, sid)
 
         print("Do you want to remove more students?y(yes)/n(no)")
-        again = input().lower()
-        if again not in ["y", "yes"]:
-            break
-
-
-def main():
-    students = []
-
-    print("Welcome to the students record program")
-
-    while True:
-        choice = show_menu()
-
-        if choice == "1":
-            run_search(students)
-        elif choice == "2":
-            run_edit(students)
-        elif choice == "3":
-            run_add(students)
-        elif choice == "4":
-            run_remove(students)
+        again = input()
+        if again == "y" or again == "yes":
+            continue
         else:
-            print("Invalid input")
-
-        print("What you like to continue(y/yes), or exit the program(n/no)?")
-        again = input().lower()
-        if again not in ["y", "yes"]:
             break
+
+
 
 
 if __name__ == "__main__":
     main()
+
+
+
 
 
 
