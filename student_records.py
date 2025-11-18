@@ -49,14 +49,6 @@ def edit_name(students, sid, new_name):
         print("Student's new name is  " + new_name)
 
 
-def show_menu():
-    print("What would you like to do today?")
-    print("-Find a student? enter 1")
-    print("-edit a student's info using student ID? enter 2")
-    print("-Add a new student? enter 3")
-    print("-Remove a student? enter 4")
-    return input()
-
 
 def run_search(students):
     while True:
@@ -150,6 +142,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
