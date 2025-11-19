@@ -1,0 +1,63 @@
+Welcome to the Student Records Management System
+What would you like to do today?
+-Find a student? enter 1
+-edit a student's info using student ID? enter 2
+-Add a new student? enter 3
+-Remove a student? enter 4
+Enter id of the student, followed by the student's information. 
+id:
+name:
+gpa:
+semester:
+Student added
+123 Emy Wang 3.4 3
+Do you want to add a new student?y(yes)/n(no)
+Enter id of the student, followed by the student's information. 
+id:
+name:
+gpa:
+semester:
+124 Jimmy Clark 3.2 4
+Do you want to add a new student?y(yes)/n(no)
+Enter id of the student, followed by the student's information. 
+id:
+name:
+gpa:
+semester:
+Student added
+125 John Doe 2.8 2
+What you like to continue(y/yes), or exit the program(n/no)?
+What would you like to do today?
+-Find a student? enter 1
+-edit a student's info using student ID? enter 2
+-Add a new student? enter 3
+-Remove a student? enter 4
+Enter the id of the student. Enter -1 to return to the previous menu
+Student found
+123 Emy Wang 3.4
+Enter the id of the student. Enter -1 to return to the previous menu
+What you like to continue(y/yes), or exit the program(n/no)?
+What would you like to do today?
+-Find a student? enter 1
+-edit a student's info using student ID? enter 2
+-Add a new student? enter 3
+-Remove a student? enter 4
+Enter the id of the student. Enter -1 to return to the previous menu
+Enter the new name of the student
+Student name modified for the student with id 123
+Student's new name is Sarah Wang
+Enter the id of the student. Enter -1 to return to the previous menu
+What you like to continue(y/yes), or exit the program(n/no)?
+What would you like to do today?
+-Find a student? enter 1
+-edit a student's info using student ID? enter 2
+-Add a new student? enter 3
+-Remove a student? enter 4
+Enter id of the student that you want to remove from the students' registry
+id:
+Student removed
+Do you want to remove more students?y(yes)/n(no)
+What you like to continue(y/yes), or exit the program(n/no)?
+
+
+
