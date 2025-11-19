@@ -1,4 +1,3 @@
-
 print("Welcome to the Student Records Management System")
 def main():
     students = []
@@ -148,9 +147,6 @@ def run_remove(students):
 
 if __name__ == "__main__":
     main()
-
-
-
 
 
 
