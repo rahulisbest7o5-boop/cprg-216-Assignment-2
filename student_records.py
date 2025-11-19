@@ -1,4 +1,3 @@
-
 print("Welcome to the Student Records Management System")
 def main():
     students = []
